@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.data.FoodItem
 import kotlinx.android.synthetic.main.fragment_first.*
 
 /**
@@ -28,9 +29,19 @@ class FirstFragment : Fragment() {
 //            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
 //        }
 
+        val foodItems = listOf(
+            FoodItem("Tofu Scramble", 90.99, "Delicious"),
+            FoodItem("Vegan Breakfast Platter", 4.99, "Delicious"),
+            FoodItem("Vegan Nom Burrito", 8.99, "Delicious"),
+            FoodItem("Tofu Scramble", 1.23, "Delicious"),
+            FoodItem("Tofu Scramble", 4.99, "Delicious"),
+            FoodItem("Tofu Scramble", 67.99, "Delicious"),
+            FoodItem("Tofu Scramble", 23.23, "Delicious")
+        )
+
         restaurantsRecyclerView.apply {
             layoutManager = LinearLayoutManager(activity)
-            adapter = RestaurantsAdapter()
+            adapter = RestaurantsAdapter(foodItems)
         }
 
     }
