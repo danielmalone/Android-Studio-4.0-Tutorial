@@ -21,7 +21,7 @@
         app:layout_constraintTop_toBottomOf="@+id/foodItemTitle" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/mainPhoto"
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
@@ -41,7 +41,7 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/mainPhoto" />
 
     <ImageView
         android:id="@+id/imageView2"

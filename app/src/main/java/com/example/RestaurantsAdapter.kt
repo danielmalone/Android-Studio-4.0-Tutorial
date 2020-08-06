@@ -3,6 +3,7 @@ package com.example
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.data.FoodItem
 import kotlinx.android.synthetic.main.a_single_restaurant_row.view.*
@@ -23,7 +24,7 @@ class RestaurantsAdapter(private val foodItems: List<FoodItem>) :
         holder.bind(foodItem)
     }
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
 
         fun bind(foodItem: FoodItem) {
             itemView.foodItemTitle.text = foodItem.name
@@ -33,6 +34,9 @@ class RestaurantsAdapter(private val foodItems: List<FoodItem>) :
                 itemView.highlyRatedIcon.visibility = View.VISIBLE
             }
 
+            view.mainPhoto.setOnClickListener {
+                view.findNavController().navigate(R.id.action_FirstFragment_to_productInfo)
+            }
         }
     }
 }
