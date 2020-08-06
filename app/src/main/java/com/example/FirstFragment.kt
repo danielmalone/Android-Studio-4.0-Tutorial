@@ -31,11 +31,11 @@ class FirstFragment : Fragment() {
 
         val foodItems = listOf(
             FoodItem("Tofu Scramble", 90.99, "Delicious"),
-            FoodItem("Vegan Breakfast Platter", 4.99, "Delicious"),
+            FoodItem("Vegan Breakfast Platter", 4.99, "Delicious", true),
             FoodItem("Vegan Nom Burrito", 8.99, "Delicious"),
             FoodItem("Tofu Scramble", 1.23, "Delicious"),
             FoodItem("Tofu Scramble", 4.99, "Delicious"),
-            FoodItem("Tofu Scramble", 67.99, "Delicious"),
+            FoodItem("Tofu Scramble", 67.99, "Delicious", true),
             FoodItem("Tofu Scramble", 23.23, "Delicious")
         )
 

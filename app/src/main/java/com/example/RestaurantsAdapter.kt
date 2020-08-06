@@ -28,6 +28,11 @@ class RestaurantsAdapter(private val foodItems: List<FoodItem>) :
         fun bind(foodItem: FoodItem) {
             itemView.foodItemTitle.text = foodItem.name
             itemView.foodPrice.text = "Price: $ ${foodItem.price}"
+
+            if (foodItem.isHighlyRated) {
+                itemView.highlyRatedIcon.visibility = View.VISIBLE
+            }
+
         }
     }
 }

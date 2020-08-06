@@ -62,4 +62,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="$4.99" />
 
+    <ImageView
+        android:id="@+id/highlyRatedIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:tint="@color/colorPrimaryDark"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/button_first"
+        app:layout_constraintStart_toEndOf="@+id/button_first"
+        app:srcCompat="@drawable/highly_rated" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
