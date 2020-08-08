@@ -31,5 +31,9 @@
     <fragment
         android:id="@+id/productInfo"
         android:name="com.example.ProductInfo"
-        android:label="ProductInfo" />
+        android:label="ProductInfo" >
+        <argument
+            android:name="productNameArgument"
+            app:argType="string" />
+    </fragment>
 </navigation>
