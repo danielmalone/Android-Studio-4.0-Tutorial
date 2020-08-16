@@ -6,11 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import com.example.data.ProductData
 import kotlinx.android.synthetic.main.product_info.*
 
-class ProductInfo : Fragment() {
+class ProductInformationFragment : Fragment() {
 
-    val args: ProductInfoArgs by navArgs()
+    private val args: ProductInformationFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,7 +22,14 @@ class ProductInfo : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        productTitle.text = args.productNameArgument
 
+        val productCode = args.productCodeArgument
+
+        val product = ProductData().allProducts().find { it.productCode == productCode }
+
+        if (product != null) {
+            productTitle.text = product.name
+            productInfoDescription.text = product.description
+        }
     }
 }

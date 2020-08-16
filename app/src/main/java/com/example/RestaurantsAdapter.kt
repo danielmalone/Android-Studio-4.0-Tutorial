@@ -35,7 +35,7 @@ class RestaurantsAdapter(private val foodItems: List<FoodItem>) :
             }
 
             view.mainPhoto.setOnClickListener {
-                val action = FirstFragmentDirections.actionFirstFragmentToProductInfo(foodItem.name)
+                val action = FirstFragmentDirections.actionFirstFragmentToProductInfo(foodItem.productCode)
                 view.findNavController().navigate(action)
             }
         }

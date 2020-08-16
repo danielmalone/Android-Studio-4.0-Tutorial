@@ -30,10 +30,10 @@
     </fragment>
     <fragment
         android:id="@+id/productInfo"
-        android:name="com.example.ProductInfo"
+        android:name="com.example.ProductInformationFragment"
         android:label="ProductInfo" >
         <argument
-            android:name="productNameArgument"
+            android:name="productCodeArgument"
             app:argType="string" />
     </fragment>
 </navigation>
