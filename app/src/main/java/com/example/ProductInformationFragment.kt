@@ -1,5 +1,6 @@
 package com.example
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -29,9 +30,27 @@ class ProductInformationFragment : Fragment() {
         val product = ProductData().allProducts().find { it.productCode == productCode }
 
         if (product != null) {
+
             productTitle.text = product.name
             productInfoDescription.text = product.description
-            productPhotoMain.setImageDrawable(ContextCompat.getDrawable(requireActivity(), product.photo))
+            productPhotoMain.setImageDrawable(
+                ContextCompat.getDrawable(
+                    requireActivity(),
+                    product.photo
+                )
+            )
+
+            addToCartButton.setOnClickListener {
+                requireActivity().getSharedPreferences("shopping_cart", Context.MODE_PRIVATE).edit()
+                    .apply {
+                        putString("cart_amount", "twenty dollars")
+                        putString("cart_tax", "twenty dollars")
+                        putString("cart_quantity", "twenty dollars")
+                        putString("cart_latest_item", product.name)
+                    }.apply()
+            }
+
         }
+
     }
 }

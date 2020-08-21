@@ -1,5 +1,6 @@
 package com.example
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -27,5 +28,10 @@ class FirstFragment : Fragment() {
             layoutManager = LinearLayoutManager(activity)
             adapter = RestaurantsAdapter(foodItems)
         }
+
+        val textViewText = requireActivity().getSharedPreferences("shopping_cart", Context.MODE_PRIVATE)
+            .getString("cart_latest_item", "default value")
+
+        latestItemInCart.text = textViewText
     }
 }

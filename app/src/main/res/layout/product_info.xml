@@ -33,8 +33,18 @@
         android:layout_width="0dp"
         android:layout_height="267dp"
         android:scaleType="centerCrop"
+        android:src="@drawable/highly_rated"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/highly_rated" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addToCartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Add to Cart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productPhotoMain" />
 </androidx.constraintlayout.widget.ConstraintLayout>
