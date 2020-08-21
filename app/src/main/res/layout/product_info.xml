@@ -11,12 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="Vegan Chocolate Cake"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/productPhotoMain" />
 
     <TextView
         android:id="@+id/productInfoDescription"
@@ -27,4 +27,14 @@
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productTitle" />
+
+    <ImageView
+        android:id="@+id/productPhotoMain"
+        android:layout_width="0dp"
+        android:layout_height="267dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/highly_rated" />
 </androidx.constraintlayout.widget.ConstraintLayout>
