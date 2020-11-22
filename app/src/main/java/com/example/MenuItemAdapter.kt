@@ -6,14 +6,14 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.data.FoodItem
-import kotlinx.android.synthetic.main.a_single_restaurant_row.view.*
+import kotlinx.android.synthetic.main.menu_item_row.view.*
 
-class RestaurantsAdapter(private val foodItems: List<FoodItem>) :
-    RecyclerView.Adapter<RestaurantsAdapter.ViewHolder>() {
+class MenuItemAdapter(private val foodItems: List<FoodItem>) :
+    RecyclerView.Adapter<MenuItemAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.a_single_restaurant_row, parent, false)
+            .inflate(R.layout.menu_item_row, parent, false)
         return ViewHolder(view)
     }
 
@@ -35,7 +35,7 @@ class RestaurantsAdapter(private val foodItems: List<FoodItem>) :
             }
 
             view.mainPhoto.setOnClickListener {
-                val action = FirstFragmentDirections.actionFirstFragmentToProductInfo(foodItem.productCode)
+                val action = MainFragmentDirections.actionFirstFragmentToProductInfo(foodItem.productCode)
                 view.findNavController().navigate(action)
             }
         }

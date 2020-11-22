@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.data.ProductData
 import kotlinx.android.synthetic.main.fragment_first.*
 
-class FirstFragment : Fragment() {
+class MainFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,7 +26,7 @@ class FirstFragment : Fragment() {
 
         restaurantsRecyclerView.apply {
             layoutManager = LinearLayoutManager(activity)
-            adapter = RestaurantsAdapter(foodItems)
+            adapter = MenuItemAdapter(foodItems)
         }
 
         val textViewText = requireActivity().getSharedPreferences("shopping_cart", Context.MODE_PRIVATE)
